@@ -30,9 +30,9 @@ export class AddUsuarioPage implements OnInit {
     //this.id = '1';
   }
 
-  // Usuarios(){
-  //   this.route.navigate(['usuarios']);
-  // }
+  Usuarios(){
+    this.route.navigate(['usuarios']);
+  }
 
   cadastrar(){
     return new Promise(resolve =>{
@@ -53,28 +53,28 @@ export class AddUsuarioPage implements OnInit {
 
 
   editar(){
-//     return new Promise(resolve=>{
-//       let dados = {
-//         requisicao: 'editar',
-//         nome: this.nome,
-//         usuario: this.usuario,
-//         senha: this.senha,
-//         nivel: this.nivel,
-//         id: this.id
-//       };
-//       this.provider.dadosApi(dados,"api.php").subscribe(data=>{
-//         // faça aqui um teste para verificar se foi editado com sucesso
-//         // if(data['sucsess']){
-//           //
-//                   this.route.navigate[('usuarios')];
-//         //} else {
-//           // mostre uma mensagem
-// //        }
+    return new Promise(resolve=>{
+      let dados = {
+        requisicao: 'editar',
+        nome: this.nome,
+        email: this.email,
+        senha: this.senha,
+        cpf: this.cpf,
+        telefone: this.telefone  
+      };
+      this.provider.dadosApi(dados,"api.php").subscribe(data=>{
+        // faça aqui um teste para verificar se foi editado com sucesso
+        // if(data['sucsess']){
+          //
+                  this.route.navigate[('usuarios')];
+        //} else {
+          // mostre uma mensagem
+//        }
 
-//       });
-//     });
+      });
+    });
     }
 
-  // constructor(){}
+
 
 }
